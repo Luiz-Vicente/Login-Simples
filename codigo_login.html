@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha()
+	}
+
+	 var login = "luiz";
+	 var senha = "luiz123";
+	 var tentativa = 1;
+
+	while(tentativa <= 3) {
+
+	var loginInformado = prompt("Insira seu nome de usuario:");
+	var senhaInformada = prompt("Insira sua senha:");
+
+		if(loginInformado == login && senhaInformada == senha) {
+			alert("Seu acesso foi permitido");
+			tentativa = 4;
+
+		}else {
+
+			if (tentativa == 3) {
+				alert("Número de tentativas excedido");
+			} else {
+				alert("Tente novamente");
+			}
+
+		}
+	tentativa = tentativa + 1;
+	}
+	
+</script>
